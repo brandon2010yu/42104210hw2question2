@@ -98,7 +98,7 @@ for i in range(10):
         class_predicted4 = clf.predict([[2, 2, 1, 2]])[0]
         class_predicted5 = clf.predict([[2, 1, 1, 1]])[0]
         class_predicted6 = clf.predict([[2, 1, 2, 2]])[0]
-        class_predicted7 = clf.predict([[3, 1, 2, 2]])[0]
+        class_predicted7 = clf.predict([[3, 1, 2, 1]])[0]
         class_predicted8 = clf.predict([[3, 1, 1, 2]])[0]
 
         # compare the prediction with the true label (located at data[4]) of the test instance to start calculating the accuracy.
@@ -127,4 +127,4 @@ lowest3 = min(accuracyArray)
 
 # print("contact_lens_training_1.csv: " + str(lowest1)) #accuracy = .5
 # print("contact_lens_training_2.csv: " + str(lowest2)) #accuracy = .75
-print("contact_lens_training_3.csv: " + str(lowest3))  # accuracy = .75
+print("contact_lens_training_3.csv: " + str(lowest3))  # accuracy = .875
