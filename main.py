@@ -45,8 +45,8 @@ for ds in dataSets:
 
     E = [[1, 1, 2, 1], [1, 2, 2, 1], [1, 1, 2, 1], [3, 1, 2, 1], [3, 2, 1, 2], [3, 2, 2, 1], [2, 1, 2, 1], [2, 2, 2, 1]]
 
-    T = [[1, 1, 1, 2], [1, 1, 1, 1], [1, 1, 2, 1], [1, 2, 1, 2], [1, 2, 1, 1], [2, 1, 1, 1], [2, 2, 2, 1], [3, 1, 1, 1],
-         [3, 1, 2, 1], [3, 2, 1, 2], [3, 2, 1, 1], [3, 2, 2, 1]]
+    T = [[1, 1, 1, 2], [1, 1, 1, 1], [1, 1, 2, 1], [1, 2, 1, 2], [1, 2, 1, 1], [3, 1, 1, 1], [3, 2, 2, 1], [2, 1, 1, 1],
+         [2, 1, 2, 1], [2, 2, 1, 2], [2, 2, 1, 1], [2, 2, 2, 1]]
 
     X = [[1, 1, 1, 2], [1, 1, 1, 1], [1, 1, 2, 2], [1, 1, 2, 1], [1, 2, 1, 2], [1, 2, 1, 1], [1, 2, 2, 2], [1, 2, 2, 1],
          [2, 1, 1, 2], [2, 1, 1, 1], [2, 1, 2, 2], [2, 1, 2, 1], [2, 2, 1, 2], [2, 2, 1, 1], [2, 2, 2, 2], [2, 2, 2, 1],
@@ -66,7 +66,7 @@ for i in range(10):
 
     # fitting the decision tree to the data setting max_depth=3
     clf = tree.DecisionTreeClassifier(criterion='entropy', max_depth=3)
-    clf = clf.fit(X, Y)
+    clf = clf.fit(T, U)
 
     # read the test data and add this data to dbTest
     # --> add your Python code here
@@ -118,13 +118,13 @@ for i in range(10):
     accuracyArray.append(accuracy)
 
 # lowest1 = min(accuracyArray)
-# lowest2 = min(accuracyArray)
-lowest3 = min(accuracyArray)
+lowest2 = min(accuracyArray)
+# lowest3 = min(accuracyArray)
 
 # print the lowest accuracy of this model during the 10 runs (training and test set) and save it.
 # your output should be something like that: final accuracy when training on contact_lens_training_1.csv: 0.2
 # --> add your Python code here
 
 # print("contact_lens_training_1.csv: " + str(lowest1)) #accuracy = .5
-# print("contact_lens_training_2.csv: " + str(lowest2)) #accuracy = .75
-print("contact_lens_training_3.csv: " + str(lowest3))  # accuracy = .875
+print("contact_lens_training_2.csv: " + str(lowest2))  # accuracy = .75
+# print("contact_lens_training_3.csv: " + str(lowest3))  # accuracy = .875
